@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Project</title>
+    <style>
+        .link-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .link-button:hover {
+            background-color: #45a049;
+        }
+        .login-container {
+            margin-top: 20px;
+            width: 300px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Form -->
+<div class="login-container"> 
+    <h2>User Authentication</h2>
+    <form action="newpage.html" method="get">
+        <input type="text" name="Username" class="input-field" placeholder="Username" required>
+        <input type="password" name="password" class="input-field" placeholder="Password" required>
+        <input type="email" name="E-mail" class="input-field" placeholder="Enter Your E-mail" required>
+        <input type="text" name="Country" class="input-field" placeholder="Enter Your Country" required>
+        <input type="text" name="Phone Number" class="input-field" placeholder="Phone Number" required>
+        <button type="submit" class="angry-button">Navigate to Next Section!</button>
+    </form>
+</div>
+
+<!-- CSS Styling -->
+<style>
+    /* Container */
+    .login-container {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Input fields */
+    .input-field {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Red border for empty fields */
+    .input-field:invalid {
+        border-color: #e74c3c;
+        box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+    }
+
+    /* Button styles */
+    .angry-button {
+        width: 100%;
+        padding: 12px;
+        background-color: #e74c3c;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    /* Button hover and focus effects */
+    .angry-button:hover {
+        background-color: #c0392b;
+    }
+
+    .angry-button:focus {
+        transform: scale(1.05);
+        background-color: #e74c3c;
+        box-shadow: 0 0 10px rgba(231, 76, 60, 0.7);
+    }
+</style>
+
+
+</body>
+</html>

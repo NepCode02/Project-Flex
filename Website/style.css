@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f4f8;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background: #0056b3;
+    color: #fff;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #0056b3;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.content-section {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+    margin-bottom: 15px;
+}
+
+.comment-section {
+    margin-top: 20px;
+}
+
+.comment-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comment-list {
+    margin-top: 10px;
+}
+
+.comment {
+    background: #eaeaea;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #0056b3;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none; /* Hidden by default */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+    }
+
+    .hero {
+        height: 70vh; /* Adjust height for smaller screens */
+    }
+
+    .content-section {
+        margin: 10px; /* Reduce margin on smaller screens */
+    }
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensa Inc.</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff5733;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            /* Set your desired width */
+            margin: 0 auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 1rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #ff5733;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #ff5733, #333);
+            color: #fff;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .cta-button {
+            padding: 0.8rem 2rem;
+            background: #fff;
+            color: #333;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background 0.3s;
+            margin: 0 auto;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #ff5733;
+            color: #fff;
+        }
+
+        /* Services Section */
+        .services,
+        .about,
+        .contact {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            flex: 1;
+            max-width: 300px;
+            background: #fff;
+            padding: 2rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* About and Contact Sections */
+        .about,
+        .contact {
+            background: #333;
+            color: #fff;
+        }
+
+        /* Login Section */
+        .login-container {
+            max-width: 400px;
+            margin: 5% auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-container button {
+            padding: 1rem;
+            width: 100%;
+            background: #ff5733;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .login-container button:hover {
+            background: #333;
+        }
+
+        /* Message */
+        .confirmation-message {
+            display: none;
+            color: #28a745;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        /* CSS-only Trick for Simulated Login Confirmation */
+        #loginCheckbox:checked~.confirmation-message {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Sensa Inc.</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Welcome to Sensa Inc Official Website</h1>
+        <p>Your Trusted Partner in Information and Technology</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service">
+                <h3>Web Development</h3>
+                <p>We build responsive and interactive websites tailored to your needs.</p>
+            </div>
+            <div class="service">
+                <h3>Mobile Apps</h3>
+                <p>High-quality mobile applications for iOS and Android platforms.</p>
+            </div>
+            <div class="service">
+                <h3>SEO Optimization</h3>
+                <p>Boost your online presence with expert SEO services.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Sensa Inc.</h2>
+        <p>We are committed to delivering top-notch tech solutions that empower businesses in the digital world.</p>
+    </section>
+
+    <!-- Contact Section with Login Form -->
+    <section id="contact" class="contact">
+
+        <div class="login-container">
+            <h2>User Authemetication</h2>
+
+            <!-- Hidden checkbox for confirmation message -->
+            <input type="checkbox" id="loginCheckbox" style="display:none;">
+
+            <form id="loginForm" onsubmit="document.getElementById('loginCheckbox').checked = true; return false;">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+
+            <!-- Confirmation Message -->
+            <p class="confirmation-message">Login successful! Welcome to NepCode.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2004-2024. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
